@@ -10,8 +10,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const validatedData = insertContactSubmissionSchema.parse(req.body);
       const submission = await storage.createContactSubmission(validatedData);
       res.status(201).json({ message: "Contact form submitted successfully", id: submission.id });
-    } catch (error) {
-      if (error instanceof Error && error.name === "ZodError") {
+    } catch (error: any) {
+      if (error.name === "ZodError") {
         res.status(400).json({ message: "Invalid form data", errors: error.errors });
       } else {
         res.status(500).json({ message: "Internal server error" });

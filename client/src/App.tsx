@@ -3,15 +3,15 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/not-found";
-import Home from "@/pages/Home";
-import About from "@/pages/About";
-import Services from "@/pages/Services";
-import Pricing from "@/pages/Pricing";
-import Testimonials from "@/pages/Testimonials";
-import Contact from "@/pages/Contact";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import NotFound from "./pages/not-found";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Pricing from "./pages/Pricing";
+import Testimonials from "./pages/Testimonials";
+import Contact from "./pages/Contact";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
 function Router() {
   return (

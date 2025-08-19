@@ -8,8 +8,8 @@ export const contactSubmissions = pgTable("contact_submissions", {
   firstName: text("first_name").notNull(),
   lastName: text("last_name").notNull(),
   email: text("email").notNull(),
-  company: text("company"),
-  service: text("service"),
+  company: text("company").default(""),
+  service: text("service").default(""),
   message: text("message").notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
@@ -21,8 +21,8 @@ export const insertContactSubmissionSchema = createInsertSchema(contactSubmissio
   firstName: z.string().min(1, "First name is required"),
   lastName: z.string().min(1, "Last name is required"),
   email: z.string().email("Please enter a valid email address"),
-  company: z.string().optional(),
-  service: z.string().optional(),
+  company: z.string().default(""),
+  service: z.string().default(""),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
