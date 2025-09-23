@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialCraft - Design Graphics Without Design Skills</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#6366F1',
+                        secondary: '#8B5CF6',
+                        accent: '#F59E0B',
+                        success: '#10B981',
+                        surface: '#FFFFFF',
+                        background: '#FAFAFA',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-background">
+    <!-- @COMPONENT: AppHeader -->
+    <header class="bg-surface border-b border-gray-200 px-4 py-3 lg:px-6">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                        <i class="fas fa-magic text-white text-sm"></i>
+                    </div>
+                    <h1 class="text-xl font-bold text-gray-800">SocialCraft</h1>
+                </div>
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="#" class="text-sm font-medium text-primary border-b-2 border-primary pb-1">Editor</a>
+                    <a href="#" class="text-sm font-medium text-gray-600 hover:text-primary transition-colors">Templates</a>
+                    <a href="#" class="text-sm font-medium text-gray-600 hover:text-primary transition-colors">Brand Kit</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-3">
+                <button class="hidden md:flex items-center space-x-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors">
+                    <i class="fas fa-history text-sm"></i>
+                    <span class="text-sm font-medium">Recent</span>
+                </button>
+                <button class="flex items-center space-x-2 px-4 py-2 bg-primary text-white rounded-lg hover:bg-indigo-600 transition-colors">
+                    <i class="fas fa-download text-sm"></i>
+                    <span class="text-sm font-medium">Export</span>
+                </button>
+                <button class="md:hidden p-2 text-gray-600 hover:text-primary">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- @END_COMPONENT: AppHeader -->
+
+    <div class="flex h-screen overflow-hidden">
+        <!-- @COMPONENT: LeftSidebar -->
+        <aside class="hidden lg:flex lg:flex-shrink-0 lg:w-80 bg-surface border-r border-gray-200 flex-col">
+            <div class="flex-1 overflow-y-auto">
+                <!-- Templates Section -->
+                <div class="p-4">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-lg font-semibold text-gray-800">Templates</h2>
+                        <button class="text-primary hover:text-indigo-600 transition-colors">
+                            <i class="fas fa-grid-2x2 text-sm"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Category Tabs -->
+                    <div class="flex space-x-1 bg-gray-100 rounded-lg p-1 mb-4">
+                        <button class="flex-1 px-3 py-2 text-sm font-medium bg-white text-primary rounded-md shadow-sm">Instagram</button>
+                        <button class="flex-1 px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-800 transition-colors">Story</button>
+                        <button class="flex-1 px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-800 transition-colors">LinkedIn</button>
+                    </div>
+
+                    <!-- Template Grid -->
+                    <!-- @MAP: instagramTemplates.map(template => ( -->
+                    <div class="grid grid-cols-2 gap-3 mb-6">
+                        <!-- Modern social media template with geometric shapes and vibrant colors -->
+                        <div class="group cursor-pointer" data-template="modern-geometric">
+                            <div class="aspect-square bg-gradient-to-br from-purple-400 to-pink-400 rounded-lg mb-2 relative overflow-hidden hover:scale-105 transition-transform">
+                                <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Modern geometric social media template" class="w-full h-full object-cover" />
+                                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all flex items-center justify-center">
+                                    <i class="fas fa-eye text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-600 font-medium">Modern Geometric</p>
+                        </div>
+
+                        <!-- Minimalist social media template with clean typography -->
+                        <div class="group cursor-pointer" data-template="minimalist-text">
+                            <div class="aspect-square bg-gradient-to-br from-blue-400 to-cyan-400 rounded-lg mb-2 relative overflow-hidden hover:scale-105 transition-transform">
+                                <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Minimalist typography social media template" class="w-full h-full object-cover" />
+                                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all flex items-center justify-center">
+                                    <i class="fas fa-eye text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-600 font-medium">Minimalist Text</p>
+                        </div>
+
+                        <!-- Vibrant gradient social media template for quotes -->
+                        <div class="group cursor-pointer" data-template="gradient-quote">
+                            <div class="aspect-square bg-gradient-to-br from-orange-400 to-red-400 rounded-lg mb-2 relative overflow-hidden hover:scale-105 transition-transform">
+                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Gradient quote social media template" class="w-full h-full object-cover" />
+                                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all flex items-center justify-center">
+                                    <i class="fas fa-eye text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-600 font-medium">Gradient Quote</p>
+                        </div>
+
+                        <!-- Professional business social media template -->
+                        <div class="group cursor-pointer" data-template="professional-business">
+                            <div class="aspect-square bg-gradient-to-br from-gray-400 to-gray-600 rounded-lg mb-2 relative overflow-hidden hover:scale-105 transition-transform">
+                                <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Professional business social media template" class="w-full h-full object-cover" />
+                                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all flex items-center justify-center">
+                                    <i class="fas fa-eye text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-600 font-medium">Professional</p>
+                        </div>
+
+                        <!-- Creative artistic social media template with abstract elements -->
+                        <div class="group cursor-pointer" data-template="creative-abstract">
+                            <div class="aspect-square bg-gradient-to-br from-green-400 to-blue-500 rounded-lg mb-2 relative overflow-hidden hover:scale-105 transition-transform">
+                                <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Creative abstract social media template" class="w-full h-full object-cover" />
+                                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all flex items-center justify-center">
+                                    <i class="fas fa-eye text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-600 font-medium">Creative Abstract</p>
+                        </div>
+
+                        <!-- Food and lifestyle social media template -->
+                        <div class="group cursor-pointer" data-template="food-lifestyle">
+                            <div class="aspect-square bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg mb-2 relative overflow-hidden hover:scale-105 transition-transform">
+                                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Food and lifestyle social media template" class="w-full h-full object-cover" />
+                                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all flex items-center justify-center">
+                                    <i class="fas fa-eye text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-600 font-medium">Food & Lifestyle</p>
+                        </div>
+
+                        <!-- Tech and innovation social media template -->
+                        <div class="group cursor-pointer" data-template="tech-innovation">
+                            <div class="aspect-square bg-gradient-to-br from-indigo-400 to-purple-500 rounded-lg mb-2 relative overflow-hidden hover:scale-105 transition-transform">
+                                <img src="https://pixabay.com/get/gb8d2ab0e46a959dc98a4b640677aa7a2d1920f81baec3e0a075e86e1b3be63e0d02dded0f5f325521526303f35f678140736b40ddc665b0e342c90ce673e2645_1280.jpg" alt="Tech and innovation social media template" class="w-full h-full object-cover" />
+                                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all flex items-center justify-center">
+                                    <i class="fas fa-eye text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-600 font-medium">Tech & Innovation</p>
+                        </div>
+
+                        <!-- Fitness and wellness social media template -->
+                        <div class="group cursor-pointer" data-template="fitness-wellness">
+                            <div class="aspect-square bg-gradient-to-br from-teal-400 to-green-500 rounded-lg mb-2 relative overflow-hidden hover:scale-105 transition-transform">
+                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Fitness and wellness social media template" class="w-full h-full object-cover" />
+                                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all flex items-center justify-center">
+                                    <i class="fas fa-eye text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-600 font-medium">Fitness & Wellness</p>
+                        </div>
+                    </div>
+                    <!-- @END_MAP )) -->
+
+                    <!-- Brand Elements Section -->
+                    <div class="border-t border-gray-200 pt-4">
+                        <h3 class="text-sm font-semibold text-gray-800 mb-3">Brand Elements</h3>
+                        <div class="grid grid-cols-3 gap-2">
+                            <!-- Colorful geometric brand design elements -->
+                            <div class="aspect-square bg-gray-100 rounded-lg flex items-center justify-center cursor-pointer hover:bg-gray-200 transition-colors">
+                                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" alt="Colorful geometric brand design elements" class="w-full h-full object-cover rounded-lg" />
+                            </div>
+                            
+                            <!-- Abstract shapes for brand identity design -->
+                            <div class="aspect-square bg-gray-100 rounded-lg flex items-center justify-center cursor-pointer hover:bg-gray-200 transition-colors">
+                                <img src="https://pixabay.com/get/g337075325ad1392d030eeddd27b9a53ec0d4810597dfd3968063d7b4d9a7f469ffaa035a539d2e4a61d8c6aee0178839acebe135b1f78c457f3a04ee1a3bd64f_1280.jpg" alt="Abstract shapes for brand identity design" class="w-full h-full object-cover rounded-lg" />
+                            </div>
+                            
+                            <!-- Modern typography and logo design elements -->
+                            <div class="aspect-square bg-gray-100 rounded-lg flex items-center justify-center cursor-pointer hover:bg-gray-200 transition-colors">
+                                <img src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" alt="Modern typography and logo design elements" class="w-full h-full object-cover rounded-lg" />
+                            </div>
+                            
+                            <!-- Minimalist icons and brand symbols -->
+                            <div class="aspect-square bg-gray-100 rounded-lg flex items-center justify-center cursor-pointer hover:bg-gray-200 transition-colors">
+                                <img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" alt="Minimalist icons and brand symbols" class="w-full h-full object-cover rounded-lg" />
+                            </div>
+                            
+                            <!-- Brand color palette and design swatches -->
+                            <div class="aspect-square bg-gray-100 rounded-lg flex items-center justify-center cursor-pointer hover:bg-gray-200 transition-colors">
+                                <img src="https://pixabay.com/get/g86aaa61e6a890b6275c6c5d6cf2b0357009de93cb845af9ddeac20b26371998c309839747155a8358692f275eeade7ca18e40c14e1a21320a1a58d34400557c8_1280.jpg" alt="Brand color palette and design swatches" class="w-full h-full object-cover rounded-lg" />
+                            </div>
+                            
+                            <!-- Professional business card and stationery designs -->
+                            <div class="aspect-square bg-gray-100 rounded-lg flex items-center justify-center cursor-pointer hover:bg-gray-200 transition-colors">
+                                <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" alt="Professional business card and stationery designs" class="w-full h-full object-cover rounded-lg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- @END_COMPONENT: LeftSidebar -->
+
+        <!-- @COMPONENT: MainCanvas -->
+        <main class="flex-1 flex flex-col overflow-hidden">
+            <!-- Canvas Toolbar -->
+            <div class="bg-surface border-b border-gray-200 px-4 py-3">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-sm text-gray-600">Zoom:</span>
+                            <button class="p-1 text-gray-600 hover:text-gray-800 transition-colors">
+                                <i class="fas fa-search-minus text-sm"></i>
+                            </button>
+                            <span class="text-sm font-medium text-gray-800 px-2">75%</span>
+                            <button class="p-1 text-gray-600 hover:text-gray-800 transition-colors">
+                                <i class="fas fa-search-plus text-sm"></i>
+                            </button>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <button class="p-2 text-gray-600 hover:text-primary hover:bg-indigo-50 rounded-lg transition-all" title="Undo">
+                                <i class="fas fa-undo text-sm"></i>
+                            </button>
+                            <button class="p-2 text-gray-600 hover:text-primary hover:bg-indigo-50 rounded-lg transition-all" title="Redo">
+                                <i class="fas fa-redo text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <span class="text-sm text-gray-600">Instagram Post • 1080 × 1080</span>
+                        <button class="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-800 border border-gray-300 rounded-lg hover:border-gray-400 transition-colors">
+                            <i class="fas fa-expand-arrows-alt text-xs"></i>
+                            <span>Resize</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canvas Area -->
+            <div class="flex-1 bg-gray-50 flex items-center justify-center p-8 overflow-auto">
+                <!-- @FUNCTIONALITY: This canvas should implement drag-and-drop editing with real-time preview -->
+                <div class="bg-surface rounded-xl shadow-xl p-8 relative" data-canvas="true">
+                    <!-- Canvas Content - Modern social media design template example -->
+                    <div class="w-80 h-80 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 rounded-lg relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600" alt="Modern social media template background with abstract shapes" class="w-full h-full object-cover mix-blend-overlay opacity-30" />
+                        
+                        <!-- Text Elements -->
+                        <div class="absolute inset-0 p-6 flex flex-col justify-between text-white" data-editable="true">
+                            <div>
+                                <h2 class="text-2xl font-bold mb-2" data-bind="post.title" data-mock="true">CREATIVE DESIGN</h2>
+                                <p class="text-sm opacity-90" data-bind="post.subtitle" data-mock="true">Made Simple & Beautiful</p>
+                            </div>
+                            
+                            <div>
+                                <p class="text-sm mb-3 leading-relaxed" data-bind="post.description" data-mock="true">Transform your ideas into stunning visuals without any design experience needed.</p>
+                                
+                                <!-- Brand Logo Placeholder -->
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center" data-implementation="Brand logo upload component">
+                                            <i class="fas fa-magic text-purple-500 text-xs"></i>
+                                        </div>
+                                        <span class="text-sm font-medium" data-bind="brand.name" data-mock="true">@socialcraft</span>
+                                    </div>
+                                    <i class="fas fa-heart text-pink-200 text-lg"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Selection Handles (shown when element is selected) -->
+                        <div class="absolute -inset-1 border-2 border-primary rounded-lg opacity-0 pointer-events-none" data-selection-handles="true">
+                            <div class="absolute -top-2 -left-2 w-4 h-4 bg-primary rounded-full"></div>
+                            <div class="absolute -top-2 -right-2 w-4 h-4 bg-primary rounded-full"></div>
+                            <div class="absolute -bottom-2 -left-2 w-4 h-4 bg-primary rounded-full"></div>
+                            <div class="absolute -bottom-2 -right-2 w-4 h-4 bg-primary rounded-full"></div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Action Buttons -->
+                    <div class="absolute top-4 right-4 flex flex-col space-y-2">
+                        <button class="w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-600 hover:text-primary hover:bg-indigo-50 transition-all" title="Add Element">
+                            <i class="fas fa-plus text-sm"></i>
+                        </button>
+                        <button class="w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-600 hover:text-primary hover:bg-indigo-50 transition-all" title="Layers">
+                            <i class="fas fa-layer-group text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Status Bar -->
+            <div class="bg-surface border-t border-gray-200 px-4 py-2">
+                <div class="flex items-center justify-between text-sm text-gray-600">
+                    <div class="flex items-center space-x-4">
+                        <span>1 of 1 artboard</span>
+                        <span>•</span>
+                        <span data-bind="project.lastSaved" data-mock="true">Auto-saved 2 minutes ago</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-wifi text-success"></i>
+                        <span>Connected</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- @END_COMPONENT: MainCanvas -->
+
+        <!-- @COMPONENT: RightSidebar -->
+        <aside class="hidden xl:flex xl:flex-shrink-0 xl:w-80 bg-surface border-l border-gray-200 flex-col">
+            <div class="flex-1 overflow-y-auto">
+                <!-- Design Properties Panel -->
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold text-gray-800 mb-4">Design Properties</h2>
+                    
+                    <!-- Element Type Selector -->
+                    <div class="mb-6">
+                        <div class="flex space-x-1 bg-gray-100 rounded-lg p-1">
+                            <button class="flex-1 px-3 py-2 text-sm font-medium bg-white text-primary rounded-md shadow-sm">Text</button>
+                            <button class="flex-1 px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-800 transition-colors">Image</button>
+                            <button class="flex-1 px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-800 transition-colors">Shape</button>
+                        </div>
+                    </div>
+
+                    <!-- Text Properties -->
+                    <div class="space-y-4 mb-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Text Content</label>
+                            <textarea class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary resize-none" rows="3" placeholder="Enter your text..." data-bind="selectedElement.text" data-mock="true">CREATIVE DESIGN</textarea>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Font</label>
+                            <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" data-bind="selectedElement.font">
+                                <option>Inter Bold</option>
+                                <option>Helvetica</option>
+                                <option>Arial</option>
+                                <option>Roboto</option>
+                            </select>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Size</label>
+                                <div class="flex items-center">
+                                    <input type="number" class="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" value="24" min="8" max="200" data-bind="selectedElement.fontSize" />
+                                    <span class="ml-2 text-sm text-gray-500">px</span>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Color</label>
+                                <div class="flex items-center space-x-2">
+                                    <input type="color" class="w-8 h-8 border border-gray-300 rounded cursor-pointer" value="#ffffff" data-bind="selectedElement.color" />
+                                    <input type="text" class="flex-1 px-2 py-1 text-sm border border-gray-300 rounded" value="#ffffff" data-bind="selectedElement.colorHex" />
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Alignment</label>
+                            <div class="flex space-x-1">
+                                <button class="flex-1 p-2 text-gray-600 hover:text-primary hover:bg-indigo-50 rounded transition-all">
+                                    <i class="fas fa-align-left"></i>
+                                </button>
+                                <button class="flex-1 p-2 text-primary bg-indigo-50 rounded">
+                                    <i class="fas fa-align-center"></i>
+                                </button>
+                                <button class="flex-1 p-2 text-gray-600 hover:text-primary hover:bg-indigo-50 rounded transition-all">
+                                    <i class="fas fa-align-right"></i>
+                                </button>
+                                <button class="flex-1 p-2 text-gray-600 hover:text-primary hover:bg-indigo-50 rounded transition-all">
+                                    <i class="fas fa-align-justify"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Brand Customization -->
+                    <div class="border-t border-gray-200 pt-4">
+                        <h3 class="text-sm font-semibold text-gray-800 mb-3">Brand Kit</h3>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Brand Colors</label>
+                                <div class="grid grid-cols-5 gap-2">
+                                    <button class="w-10 h-10 bg-purple-500 rounded-lg border-2 border-purple-600 hover:scale-105 transition-transform" data-color="#8B5CF6"></button>
+                                    <button class="w-10 h-10 bg-pink-500 rounded-lg border-2 border-transparent hover:border-pink-600 hover:scale-105 transition-transform" data-color="#EC4899"></button>
+                                    <button class="w-10 h-10 bg-blue-500 rounded-lg border-2 border-transparent hover:border-blue-600 hover:scale-105 transition-transform" data-color="#3B82F6"></button>
+                                    <button class="w-10 h-10 bg-green-500 rounded-lg border-2 border-transparent hover:border-green-600 hover:scale-105 transition-transform" data-color="#10B981"></button>
+                                    <button class="w-10 h-10 bg-orange-500 rounded-lg border-2 border-transparent hover:border-orange-600 hover:scale-105 transition-transform" data-color="#F59E0B"></button>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Logo</label>
+                                <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center hover:border-primary hover:bg-indigo-50 transition-colors cursor-pointer">
+                                    <i class="fas fa-upload text-gray-400 text-2xl mb-2"></i>
+                                    <p class="text-sm text-gray-600">Upload your logo</p>
+                                    <p class="text-xs text-gray-500">PNG, JPG up to 10MB</p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Brand Fonts</label>
+                                <div class="space-y-2">
+                                    <div class="flex items-center justify-between p-2 border border-gray-200 rounded-lg">
+                                        <span class="text-sm font-medium">Inter</span>
+                                        <span class="text-xs text-gray-500">Primary</span>
+                                    </div>
+                                    <div class="flex items-center justify-between p-2 border border-gray-200 rounded-lg">
+                                        <span class="text-sm">Roboto</span>
+                                        <span class="text-xs text-gray-500">Secondary</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Export Settings -->
+                    <div class="border-t border-gray-200 pt-4 mt-6">
+                        <h3 class="text-sm font-semibold text-gray-800 mb-3">Export Settings</h3>
+                        
+                        <div class="space-y-3">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Format</label>
+                                <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                                    <option>PNG (Recommended)</option>
+                                    <option>JPG</option>
+                                    <option>PDF</option>
+                                    <option>SVG</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Quality</label>
+                                <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                                    <option>High (300 DPI)</option>
+                                    <option>Standard (150 DPI)</option>
+                                    <option>Web (72 DPI)</option>
+                                </select>
+                            </div>
+                            
+                            <button class="w-full px-4 py-3 bg-primary text-white font-medium rounded-lg hover:bg-indigo-600 transition-colors flex items-center justify-center space-x-2" data-event="click:handleExport">
+                                <i class="fas fa-download"></i>
+                                <span>Download Design</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- @END_COMPONENT: RightSidebar -->
+    </div>
+
+    <!-- @COMPONENT: MobileTemplateModal (hidden by default) -->
+    <div class="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden hidden" data-modal="template-selector">
+        <div class="absolute bottom-0 left-0 right-0 bg-surface rounded-t-xl max-h-96 overflow-y-auto">
+            <div class="p-4">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-lg font-semibold text-gray-800">Choose Template</h2>
+                    <button class="p-2 text-gray-600 hover:text-gray-800" data-event="click:closeMobileModal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <!-- Mobile Template Grid -->
+                <div class="grid grid-cols-2 gap-3">
+                    <!-- Mobile template cards would be populated here -->
+                    <div class="aspect-square bg-gradient-to-br from-purple-400 to-pink-400 rounded-lg"></div>
+                    <div class="aspect-square bg-gradient-to-br from-blue-400 to-cyan-400 rounded-lg"></div>
+                    <div class="aspect-square bg-gradient-to-br from-orange-400 to-red-400 rounded-lg"></div>
+                    <div class="aspect-square bg-gradient-to-br from-green-400 to-blue-500 rounded-lg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- @END_COMPONENT: MobileTemplateModal -->
+
+    <!-- @COMPONENT: ExportModal (hidden by default) -->
+    <div class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden" data-modal="export">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-surface rounded-xl shadow-xl max-w-md w-full p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-xl font-semibold text-gray-800">Export Your Design</h2>
+                    <button class="p-2 text-gray-600 hover:text-gray-800" data-event="click:closeExportModal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div class="space-y-4">
+                    <!-- Export preview -->
+                    <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                        <!-- Preview content matching modern creative design example -->
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Design export preview showing modern creative graphics" class="w-full h-full object-cover" />
+                    </div>
+                    
+                    <div class="flex space-x-3">
+                        <button class="flex-1 px-4 py-3 bg-primary text-white font-medium rounded-lg hover:bg-indigo-600 transition-colors flex items-center justify-center space-x-2">
+                            <i class="fas fa-download text-sm"></i>
+                            <span>Download PNG</span>
+                        </button>
+                        <button class="px-4 py-3 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Export options showing different marketing graphics formats -->
+                    <div class="border-t border-gray-200 pt-4">
+                        <h3 class="text-sm font-medium text-gray-800 mb-2">Quick Export Options</h3>
+                        <div class="grid grid-cols-2 gap-2 text-xs">
+                            <button class="p-2 text-left border border-gray-200 rounded hover:bg-gray-50 transition-colors">
+                                <div class="font-medium">Instagram Post</div>
+                                <div class="text-gray-500">1080 × 1080</div>
+                            </button>
+                            <button class="p-2 text-left border border-gray-200 rounded hover:bg-gray-50 transition-colors">
+                                <div class="font-medium">Instagram Story</div>
+                                <div class="text-gray-500">1080 × 1920</div>
+                            </button>
+                            <button class="p-2 text-left border border-gray-200 rounded hover:bg-gray-50 transition-colors">
+                                <div class="font-medium">Facebook Post</div>
+                                <div class="text-gray-500">1200 × 630</div>
+                            </button>
+                            <button class="p-2 text-left border border-gray-200 rounded hover:bg-gray-50 transition-colors">
+                                <div class="font-medium">LinkedIn Banner</div>
+                                <div class="text-gray-500">1584 × 396</div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- @END_COMPONENT: ExportModal -->
+
+    <script>
+        (function() {
+            // TODO: Implement canvas-based editor for real-time graphics generation
+            // TODO: Implement drag-and-drop functionality for template elements
+            // TODO: Implement brand customization with color palette storage
+            // TODO: Implement template categorization by platform and use case
+            // TODO: Implement form-based editing for non-designers
+            // TODO: Implement download optimization for different social platforms
+
+            // Mock interactions for demonstration
+            const mockInteractions = {
+                // Template selection
+                handleTemplateSelect: function(templateId) {
+                    console.log('Selected template:', templateId);
+                    // In real implementation: Load template data and render on canvas
+                },
+                
+                // Text editing
+                handleTextEdit: function(element, newText) {
+                    console.log('Text updated:', newText);
+                    // In real implementation: Update canvas element text
+                },
+                
+                // Brand color application
+                handleBrandColorSelect: function(color) {
+                    console.log('Applied brand color:', color);
+                    // In real implementation: Apply color to selected canvas element
+                },
+                
+                // Export functionality
+                handleExport: function(format, quality) {
+                    console.log('Exporting design as:', format, quality);
+                    // In real implementation: Generate and download the design file
+                },
+                
+                // Canvas zoom controls
+                handleZoom: function(direction) {
+                    console.log('Zoom:', direction);
+                    // In real implementation: Adjust canvas zoom level
+                }
+            };
+
+            // Add event listeners for demonstration
+            document.addEventListener('DOMContentLoaded', function() {
+                // Template selection
+                document.querySelectorAll('[data-template]').forEach(template => {
+                    template.addEventListener('click', function() {
+                        const templateId = this.getAttribute('data-template');
+                        mockInteractions.handleTemplateSelect(templateId);
+                    });
+                });
+
+                // Brand color selection
+                document.querySelectorAll('[data-color]').forEach(colorBtn => {
+                    colorBtn.addEventListener('click', function() {
+                        const color = this.getAttribute('data-color');
+                        mockInteractions.handleBrandColorSelect(color);
+                    });
+                });
+
+                // Export button
+                document.querySelectorAll('[data-event="click:handleExport"]').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        mockInteractions.handleExport('PNG', 'High');
+                    });
+                });
+
+                // Zoom controls
+                document.querySelector('.fa-search-minus')?.parentElement.addEventListener('click', () => {
+                    mockInteractions.handleZoom('out');
+                });
+                
+                document.querySelector('.fa-search-plus')?.parentElement.addEventListener('click', () => {
+                    mockInteractions.handleZoom('in');
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

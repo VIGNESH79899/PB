@@ -1,0 +1,792 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelBoost - Social Media Graphics Made Easy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B5CF6',
+                        secondary: '#EC4899',
+                        accent: '#F59E0B',
+                        neutral: {
+                            800: '#1F2937',
+                            600: '#6B7280',
+                            100: '#F3F4F6'
+                        }
+                    },
+                    fontFamily: {
+                        'heading': ['Inter', 'sans-serif'],
+                        'body': ['Source Sans Pro', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'float': 'float 3s ease-in-out infinite'
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-body text-neutral-800 bg-white">
+    <!-- @COMPONENT: Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-lg border-b border-gray-200/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="text-2xl font-heading font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                            PixelBoost
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-neutral-800 hover:text-primary transition-colors duration-200 font-medium">Home</a>
+                        <a href="#about" class="text-neutral-600 hover:text-primary transition-colors duration-200">About</a>
+                        <a href="#services" class="text-neutral-600 hover:text-primary transition-colors duration-200">Services</a>
+                        <a href="#pricing" class="text-neutral-600 hover:text-primary transition-colors duration-200">Pricing</a>
+                        <a href="#testimonials" class="text-neutral-600 hover:text-primary transition-colors duration-200">Testimonials</a>
+                        <a href="#contact" class="text-neutral-600 hover:text-primary transition-colors duration-200">Contact</a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <button class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200">
+                        Get Started
+                    </button>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-neutral-600 hover:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- @COMPONENT: Hero Section -->
+    <section id="home" class="pt-16 bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50 min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left animate-fade-in">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-neutral-800 leading-tight">
+                        Create Stunning
+                        <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                            Social Media
+                        </span>
+                        Graphics in Minutes
+                    </h1>
+                    <p class="mt-6 text-xl text-neutral-600 leading-relaxed">
+                        Professional social media graphics without design skills. Customize beautiful templates, maintain brand consistency, and boost engagement across all platforms.
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <button class="bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                            Start Creating Free
+                        </button>
+                        <button class="border-2 border-primary text-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary hover:text-white transition-all duration-300">
+                            Watch Demo
+                        </button>
+                    </div>
+                    <div class="mt-8 flex items-center justify-center lg:justify-start space-x-6 text-sm text-neutral-500">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            No credit card required
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            1000+ templates
+                        </div>
+                    </div>
+                </div>
+                <div class="relative animate-slide-up">
+                    <!-- Modern design tool interface mockup showing template creation -->
+                    <div class="relative bg-white rounded-2xl shadow-2xl p-6 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                        <div class="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex space-x-2">
+                                    <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+                                    <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                                    <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                                </div>
+                                <div class="text-xs text-neutral-500">Instagram Post</div>
+                            </div>
+                            <!-- Modern website enhancement services graphic -->
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" alt="Website enhancement services dashboard" class="w-full h-48 object-cover rounded-lg mb-4" />
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-neutral-600">Templates</span>
+                                    <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded-full">1,247</span>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <div class="flex-1 h-2 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+                                    <div class="flex-1 h-2 bg-neutral-200 rounded-full"></div>
+                                    <div class="flex-1 h-2 bg-neutral-200 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -top-4 -right-4 bg-gradient-to-r from-accent to-orange-400 text-white p-4 rounded-xl shadow-lg animate-float">
+                        <i class="fas fa-magic text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-heading font-bold text-neutral-800 mb-6">
+                    Empowering Social Media Managers
+                </h2>
+                <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+                    We understand the challenges of creating consistent, professional graphics at scale. PixelBoost transforms complex design tasks into simple, intuitive workflows.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <!-- Modern startup office environment -->
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Modern startup office with collaborative workspace" class="w-full h-auto rounded-2xl shadow-lg" />
+                </div>
+                <div class="space-y-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center">
+                            <i class="fas fa-bolt text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-heading font-semibold text-neutral-800 mb-2">Lightning Fast Creation</h3>
+                            <p class="text-neutral-600">Transform ideas into professional graphics in under 60 seconds with our AI-powered template system.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-secondary to-accent rounded-xl flex items-center justify-center">
+                            <i class="fas fa-palette text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-heading font-semibold text-neutral-800 mb-2">Brand Consistency</h3>
+                            <p class="text-neutral-600">Maintain perfect brand alignment across all platforms with automated color schemes and typography.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-accent to-primary rounded-xl flex items-center justify-center">
+                            <i class="fas fa-users text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-heading font-semibold text-neutral-800 mb-2">Team Collaboration</h3>
+                            <p class="text-neutral-600">Seamlessly work with your team, share templates, and maintain approval workflows.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: About Section -->
+
+    <!-- @COMPONENT: Services Section -->
+    <section id="services" class="py-20 bg-gradient-to-br from-neutral-100 to-purple-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-heading font-bold text-neutral-800 mb-6">
+                    Everything You Need to Succeed
+                </h2>
+                <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+                    From Instagram stories to LinkedIn banners, create professional graphics for every platform and purpose.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1: Template Library -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-layer-group text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold text-neutral-800 mb-4">Template Library</h3>
+                    <p class="text-neutral-600 mb-6">Access 1000+ professionally designed templates for every social media platform and marketing need.</p>
+                    <ul class="space-y-2 text-sm text-neutral-600">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Instagram posts & stories</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Facebook covers & ads</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>LinkedIn banners</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2: Brand Customization -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-secondary to-accent rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-paint-brush text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold text-neutral-800 mb-4">Brand Customization</h3>
+                    <p class="text-neutral-600 mb-6">Upload your brand assets and automatically apply them across all templates for consistent branding.</p>
+                    <ul class="space-y-2 text-sm text-neutral-600">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Logo integration</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Color palette matching</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Font consistency</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3: AI-Powered Design -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-accent to-primary rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-robot text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold text-neutral-800 mb-4">AI-Powered Design</h3>
+                    <p class="text-neutral-600 mb-6">Let AI suggest layouts, colors, and content based on your brand and campaign objectives.</p>
+                    <ul class="space-y-2 text-sm text-neutral-600">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Smart layout suggestions</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Content optimization</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>A/B testing insights</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4: Batch Processing -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-clone text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold text-neutral-800 mb-4">Batch Processing</h3>
+                    <p class="text-neutral-600 mb-6">Create multiple graphics simultaneously and resize for different platforms with one click.</p>
+                    <ul class="space-y-2 text-sm text-neutral-600">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Multi-format export</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Bulk content updates</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Automated resizing</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5: Team Collaboration -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-secondary to-accent rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-users-cog text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold text-neutral-800 mb-4">Team Collaboration</h3>
+                    <p class="text-neutral-600 mb-6">Streamline your workflow with team sharing, approval processes, and real-time collaboration.</p>
+                    <ul class="space-y-2 text-sm text-neutral-600">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Team workspaces</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Approval workflows</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Comment system</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6: Analytics & Insights -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-accent to-primary rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold text-neutral-800 mb-4">Analytics & Insights</h3>
+                    <p class="text-neutral-600 mb-6">Track performance metrics and get insights on which designs drive the best engagement.</p>
+                    <ul class="space-y-2 text-sm text-neutral-600">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Performance tracking</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Design recommendations</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>ROI insights</li>
+                    </ul>
+                </div>
+
+                <!-- Service 7: Content Calendar -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 md:col-span-2 lg:col-span-1 lg:col-start-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-calendar-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold text-neutral-800 mb-4">Content Calendar</h3>
+                    <p class="text-neutral-600 mb-6">Plan, schedule, and organize your visual content with our integrated calendar system.</p>
+                    <ul class="space-y-2 text-sm text-neutral-600">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Content scheduling</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Campaign planning</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Auto-publishing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Services Section -->
+
+    <!-- @COMPONENT: Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-heading font-bold text-neutral-800 mb-6">
+                    Choose Your Perfect Plan
+                </h2>
+                <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+                    From solo creators to enterprise teams, we have a plan that scales with your needs.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Starter Plan -->
+                <div class="bg-white rounded-2xl border-2 border-gray-200 p-8 hover:border-primary transition-colors duration-300">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-heading font-bold text-neutral-800 mb-2">Starter</h3>
+                        <p class="text-neutral-600 mb-6">Perfect for individual creators</p>
+                        <div class="mb-8">
+                            <span class="text-4xl font-heading font-bold text-neutral-800">$19</span>
+                            <span class="text-neutral-600">/month</span>
+                        </div>
+                        <button class="w-full bg-gray-100 text-neutral-800 py-3 rounded-full font-semibold hover:bg-gray-200 transition-colors duration-200">
+                            Start Free Trial
+                        </button>
+                    </div>
+                    <ul class="mt-8 space-y-4">
+                        <li class="flex items-center text-neutral-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            100 templates access
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Basic brand customization
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            10 downloads per month
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Email support
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="bg-gradient-to-br from-primary to-secondary rounded-2xl p-8 text-white relative transform scale-105 shadow-2xl">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-accent text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-2xl font-heading font-bold mb-2">Professional</h3>
+                        <p class="text-purple-100 mb-6">For growing businesses</p>
+                        <div class="mb-8">
+                            <span class="text-4xl font-heading font-bold">$49</span>
+                            <span class="text-purple-100">/month</span>
+                        </div>
+                        <button class="w-full bg-white text-primary py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200">
+                            Start Free Trial
+                        </button>
+                    </div>
+                    <ul class="mt-8 space-y-4">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            500+ templates access
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            Advanced brand kit
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            Unlimited downloads
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            AI-powered suggestions
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            Team collaboration (5 users)
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            Priority support
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-white rounded-2xl border-2 border-gray-200 p-8 hover:border-primary transition-colors duration-300">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-heading font-bold text-neutral-800 mb-2">Enterprise</h3>
+                        <p class="text-neutral-600 mb-6">For large organizations</p>
+                        <div class="mb-8">
+                            <span class="text-4xl font-heading font-bold text-neutral-800">$99</span>
+                            <span class="text-neutral-600">/month</span>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-primary to-secondary text-white py-3 rounded-full font-semibold hover:shadow-lg transition-shadow duration-200">
+                            Contact Sales
+                        </button>
+                    </div>
+                    <ul class="mt-8 space-y-4">
+                        <li class="flex items-center text-neutral-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            All templates + custom designs
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Advanced analytics
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Unlimited team members
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            API access
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Dedicated account manager
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            24/7 phone support
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-neutral-600 mb-4">All plans include a 14-day free trial. No credit card required.</p>
+                <div class="flex items-center justify-center space-x-6 text-sm text-neutral-500">
+                    <div class="flex items-center">
+                        <i class="fas fa-shield-alt text-green-500 mr-2"></i>
+                        SSL Encrypted
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-credit-card text-green-500 mr-2"></i>
+                        Secure Payments
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-undo text-green-500 mr-2"></i>
+                        Cancel Anytime
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Pricing Section -->
+
+    <!-- @COMPONENT: Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-heading font-bold text-neutral-800 mb-6">
+                    Loved by Social Media Managers
+                </h2>
+                <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+                    Join thousands of professionals who've transformed their social media workflow with PixelBoost.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="flex space-x-1">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+                    <p class="text-neutral-600 mb-6 italic">
+                        "PixelBoost has completely transformed how we create content. What used to take hours now takes minutes. Our engagement rates have increased by 40% since using their templates."
+                    </p>
+                    <div class="flex items-center">
+                        <!-- Client testimonials business professional headshot -->
+                        <img src="https://pixabay.com/get/gbba1cd4bc8cf75f9a355124f3558466c37edd1cf7534e5099a889ab93cff6e42b7c2003de6c16c325cb5da9511fd21719d3e9da64785786f36cf891ca622359a_1280.jpg" alt="Professional woman giving business testimonial" class="w-12 h-12 rounded-full object-cover mr-4" />
+                        <div>
+                            <h4 class="font-heading font-semibold text-neutral-800">Sarah Johnson</h4>
+                            <p class="text-sm text-neutral-600">Social Media Manager, TechCorp</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="flex space-x-1">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+                    <p class="text-neutral-600 mb-6 italic">
+                        "The brand customization feature is a game-changer. We maintain perfect consistency across all our clients' campaigns without any design headaches. Highly recommend!"
+                    </p>
+                    <div class="flex items-center">
+                        <!-- Business professional giving positive testimonial -->
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" alt="Professional businessman providing testimonial" class="w-12 h-12 rounded-full object-cover mr-4" />
+                        <div>
+                            <h4 class="font-heading font-semibold text-neutral-800">Michael Chen</h4>
+                            <p class="text-sm text-neutral-600">Creative Director, DigitalFlow</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="flex space-x-1">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+                    <p class="text-neutral-600 mb-6 italic">
+                        "As a solo freelancer, PixelBoost gives me the power of a full design team. The AI suggestions help me create variations I never would have thought of."
+                    </p>
+                    <div class="flex items-center">
+                        <!-- Client business testimonial professional photo -->
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" alt="Professional client providing business testimonial" class="w-12 h-12 rounded-full object-cover mr-4" />
+                        <div>
+                            <h4 class="font-heading font-semibold text-neutral-800">Emily Rodriguez</h4>
+                            <p class="text-sm text-neutral-600">Freelance Marketer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="mt-16 bg-white rounded-2xl p-8 shadow-lg">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-3xl font-heading font-bold text-primary mb-2">50K+</div>
+                        <div class="text-neutral-600">Active Users</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-heading font-bold text-secondary mb-2">2M+</div>
+                        <div class="text-neutral-600">Graphics Created</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-heading font-bold text-accent mb-2">98%</div>
+                        <div class="text-neutral-600">Satisfaction Rate</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-heading font-bold text-primary mb-2">24/7</div>
+                        <div class="text-neutral-600">Support Available</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Testimonials Section -->
+
+    <!-- @COMPONENT: Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-heading font-bold text-neutral-800 mb-6">
+                    Ready to Transform Your Social Media?
+                </h2>
+                <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+                    Have questions? Want to see a demo? Our team is here to help you get started with PixelBoost.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <!-- Web development technology workspace -->
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Web development technology workspace with modern equipment" class="w-full h-auto rounded-2xl shadow-lg" />
+                    
+                    <div class="mt-8 space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center">
+                                <i class="fas fa-envelope text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-heading font-semibold text-neutral-800 mb-1">Email Us</h3>
+                                <p class="text-neutral-600">hello@pixelboost.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-secondary to-accent rounded-xl flex items-center justify-center">
+                                <i class="fas fa-phone text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-heading font-semibold text-neutral-800 mb-1">Call Us</h3>
+                                <p class="text-neutral-600">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-accent to-primary rounded-xl flex items-center justify-center">
+                                <i class="fas fa-clock text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-heading font-semibold text-neutral-800 mb-1">Business Hours</h3>
+                                <p class="text-neutral-600">Mon-Fri: 9AM-6PM PST</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-neutral-100 to-purple-50 rounded-2xl p-8">
+                    <form class="space-y-6" data-implementation="Should validate form and handle submission">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-neutral-700 mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+                                   placeholder="Enter your full name" data-mock="true">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-neutral-700 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+                                   placeholder="Enter your email address" data-mock="true">
+                        </div>
+                        
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-neutral-700 mb-2">Company (Optional)</label>
+                            <input type="text" id="company" name="company" 
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+                                   placeholder="Enter your company name" data-mock="true">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-neutral-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" required 
+                                      class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200 resize-none"
+                                      placeholder="Tell us about your project and how we can help..." data-mock="true"></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-gradient-to-r from-primary to-secondary text-white py-3 rounded-lg font-semibold hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200"
+                                data-event="click:handleSubmit">
+                            Send Message
+                        </button>
+                        
+                        <p class="text-sm text-neutral-600 text-center">
+                            We'll get back to you within 24 hours. Promise!
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact Section -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-neutral-800 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="lg:col-span-2">
+                    <div class="text-2xl font-heading font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
+                        PixelBoost
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Empowering social media managers to create stunning graphics without design skills. Transform your content strategy with professional templates and AI-powered customization.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-secondary transition-colors duration-200">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-secondary transition-colors duration-200">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-secondary transition-colors duration-200">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-secondary transition-colors duration-200">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-heading font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition-colors duration-200">Home</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors duration-200">About</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors duration-200">Services</a></li>
+                        <li><a href="#pricing" class="text-gray-300 hover:text-white transition-colors duration-200">Pricing</a></li>
+                        <li><a href="#testimonials" class="text-gray-300 hover:text-white transition-colors duration-200">Testimonials</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-200">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div>
+                    <h3 class="text-lg font-heading font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">Help Center</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">Documentation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">API Reference</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-300">
+                    © 2024 PixelBoost. All rights reserved. Made with ❤️ for social media managers everywhere.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <!-- @COMPONENT: Scripts -->
+    <script>
+        (function() {
+            // TODO: Implement React Router for multi-page navigation
+            // TODO: Implement contact form validation and submission handling
+            // TODO: Implement server-side storage for contact submissions
+            // TODO: Add smooth scrolling navigation
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Mobile menu toggle (placeholder for functionality)
+            const mobileMenuButton = document.querySelector('.md\\:hidden button');
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function() {
+                    // TODO: Implement mobile menu toggle functionality
+                    console.log('Mobile menu toggle clicked');
+                });
+            }
+
+            // Contact form handling (placeholder)
+            const contactForm = document.querySelector('form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // TODO: Implement form validation and submission
+                    console.log('Contact form submitted');
+                    alert('Thank you for your message! We\'ll get back to you soon.');
+                });
+            }
+
+            // Navbar background on scroll
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('nav');
+                if (window.scrollY > 100) {
+                    navbar.classList.add('bg-white/95');
+                    navbar.classList.remove('bg-white/90');
+                } else {
+                    navbar.classList.add('bg-white/90');
+                    navbar.classList.remove('bg-white/95');
+                }
+            });
+        })();
+    </script>
+    <!-- @END_COMPONENT: Scripts -->
+</body>
+</html>

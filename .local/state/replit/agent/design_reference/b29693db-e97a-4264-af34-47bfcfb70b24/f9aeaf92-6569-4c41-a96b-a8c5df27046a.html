@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelBoost - Premium Website Enhancement Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': {
+                            500: '#2563EB',
+                            600: '#1D4ED8',
+                            700: '#1E40AF'
+                        },
+                        'secondary': {
+                            500: '#10B981',
+                            600: '#059669',
+                            700: '#047857'
+                        },
+                        'accent': {
+                            500: '#F59E0B',
+                            600: '#D97706',
+                            700: '#B45309'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-white">
+
+    <!-- @COMPONENT: Navigation -->
+    <nav class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="text-2xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
+                            PixelBoost
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-900 hover:text-primary-500 font-medium transition-colors">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-primary-500 font-medium transition-colors">About Us</a>
+                    <a href="#services" class="text-gray-600 hover:text-primary-500 font-medium transition-colors">Services</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-primary-500 font-medium transition-colors">Pricing</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-primary-500 font-medium transition-colors">Testimonials</a>
+                    <a href="#contact" class="text-gray-600 hover:text-primary-500 font-medium transition-colors">Contact</a>
+                    <button class="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-2 rounded-lg font-medium hover:from-primary-600 hover:to-primary-700 transition-all transform hover:scale-105">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-900 font-medium">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-600 hover:text-primary-500">About Us</a>
+                <a href="#services" class="block px-3 py-2 text-gray-600 hover:text-primary-500">Services</a>
+                <a href="#pricing" class="block px-3 py-2 text-gray-600 hover:text-primary-500">Pricing</a>
+                <a href="#testimonials" class="block px-3 py-2 text-gray-600 hover:text-primary-500">Testimonials</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-600 hover:text-primary-500">Contact</a>
+                <div class="px-3 py-2">
+                    <button class="w-full bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-2 rounded-lg font-medium">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- @COMPONENT: Hero Section -->
+    <section id="home" class="relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                            Boost Your Website's
+                            <span class="bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500 bg-clip-text text-transparent">
+                                Performance
+                            </span>
+                        </h1>
+                        <p class="text-xl text-gray-600 leading-relaxed">
+                            Professional website enhancement services that transform your online presence. From redesigns to performance optimization, we make your website work harder for your business.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#services" class="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-primary-600 hover:to-primary-700 transition-all transform hover:scale-105 text-center">
+                            View Our Services
+                        </a>
+                        <button class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg hover:border-primary-500 hover:text-primary-500 transition-all">
+                            Watch Demo
+                        </button>
+                    </div>
+
+                    <div class="flex items-center space-x-8 pt-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-gray-900">500+</div>
+                            <div class="text-gray-600">Projects Completed</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-gray-900">98%</div>
+                            <div class="text-gray-600">Client Satisfaction</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-gray-900">24/7</div>
+                            <div class="text-gray-600">Support</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <!-- Professional startup office workspace with modern technology -->
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Modern startup office workspace" class="rounded-2xl shadow-2xl w-full" />
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-3 h-3 bg-secondary-500 rounded-full animate-pulse"></div>
+                            <span class="text-gray-700 font-medium">Enhancing your website...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: About Us Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">About PixelBoost</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We're a team of passionate web developers and designers dedicated to transforming websites into powerful business tools.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6">
+                    <h3 class="text-3xl font-bold text-gray-900">Our Mission</h3>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        At PixelBoost, we believe every business deserves a website that not only looks exceptional but performs flawlessly. Our comprehensive enhancement services ensure your online presence drives real results.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-gradient-to-r from-secondary-500 to-secondary-600 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Expert Team</h4>
+                                <p class="text-gray-600">Certified developers and designers with years of experience</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-gradient-to-r from-secondary-500 to-secondary-600 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Proven Results</h4>
+                                <p class="text-gray-600">Track record of improving website performance by 300%+</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-gradient-to-r from-secondary-500 to-secondary-600 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Full Support</h4>
+                                <p class="text-gray-600">Ongoing maintenance and support for long-term success</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <!-- Modern web development technology setup -->
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Web development technology workspace" class="rounded-2xl shadow-xl w-full" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: About Us Section -->
+
+    <!-- @COMPONENT: Services Section -->
+    <section id="services" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive website enhancement services designed to boost your online performance and drive business growth.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Website Redesign -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-palette text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Website Redesign</h3>
+                    <p class="text-gray-600 mb-6">
+                        Complete visual overhaul with modern design principles, improved user experience, and brand alignment.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> Modern UI/UX Design</li>
+                        <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> Brand Integration</li>
+                        <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> Conversion Optimization</li>
+                    </ul>
+                </div>
+
+                <!-- Performance Optimization -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-secondary-500 to-secondary-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-rocket text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Performance Optimization</h3>
+                    <p class="text-gray-600 mb-6">
+                        Speed up your website with advanced optimization techniques and performance monitoring.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> Page Speed Optimization</li>
+                        <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> Image Compression</li>
+                        <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> Code Minification</li>
+                    </ul>
+                </div>
+
+                <!-- SEO Enhancement -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-accent-500 to-accent-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-search text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">SEO Enhancement</h3>
+                    <p class="text-gray-600 mb-6">
+                        Improve search engine rankings with comprehensive SEO optimization and content strategy.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> Technical SEO Audit</li>
+                        <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> Keyword Optimization</li>
+                        <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> Content Strategy</li>
+                    </ul>
+                </div>
+
+                <!-- Security Improvements -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary-600 to-primary-700 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Security Improvements</h3>
+                    <p class="text-gray-600 mb-6">
+                        Protect your website with advanced security measures and regular vulnerability assessments.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> SSL Certificate Setup</li>
+                        <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> Security Scanning</li>
+                        <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> Backup Solutions</li>
+                    </ul>
+                </div>
+
+                <!-- Mobile Responsiveness -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-secondary-600 to-secondary-700 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Mobile Responsiveness</h3>
+                    <p class="text-gray-600 mb-6">
+                        Ensure perfect display across all devices with responsive design and mobile optimization.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> Responsive Design</li>
+                        <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> Touch Optimization</li>
+                        <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> Cross-browser Testing</li>
+                    </ul>
+                </div>
+
+                <!-- UI/UX Improvements -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-accent-600 to-accent-700 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">UI/UX Improvements</h3>
+                    <p class="text-gray-600 mb-6">
+                        Enhance user experience with intuitive navigation and user-centered design principles.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> User Journey Mapping</li>
+                        <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> Accessibility Compliance</li>
+                        <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> Conversion Rate Optimization</li>
+                    </ul>
+                </div>
+
+                <!-- Maintenance & Support -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 md:col-span-2 lg:col-span-3">
+                    <div class="grid lg:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <div class="w-16 h-16 bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500 rounded-xl flex items-center justify-center mb-6">
+                                <i class="fas fa-tools text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Maintenance & Support</h3>
+                            <p class="text-gray-600 mb-6">
+                                Ongoing maintenance, updates, and 24/7 support to keep your website running smoothly and securely.
+                            </p>
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> Regular Updates</li>
+                                    <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> Security Monitoring</li>
+                                    <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> Performance Tracking</li>
+                                </ul>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> 24/7 Support</li>
+                                    <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> Backup Management</li>
+                                    <li class="flex items-center"><i class="fas fa-check text-secondary-500 mr-2"></i> Content Updates</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <!-- Professional website enhancement services visualization -->
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Website enhancement analytics dashboard" class="rounded-xl shadow-lg w-full" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Services Section -->
+
+    <!-- @COMPONENT: Pricing Section -->
+    <section id="pricing" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Transparent Pricing</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Choose the perfect plan for your business needs. All plans include our commitment to quality and ongoing support.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Starter Plan -->
+                <div class="bg-white p-8 rounded-2xl border-2 border-gray-200 hover:border-primary-500 transition-all">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Starter</h3>
+                        <p class="text-gray-600 mb-4">Perfect for small businesses</p>
+                        <div class="text-4xl font-bold text-gray-900">$999</div>
+                        <div class="text-gray-600">one-time</div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary-500 mr-3"></i>
+                            <span class="text-gray-600">Basic Website Redesign</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary-500 mr-3"></i>
+                            <span class="text-gray-600">Mobile Responsiveness</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary-500 mr-3"></i>
+                            <span class="text-gray-600">Basic SEO Setup</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary-500 mr-3"></i>
+                            <span class="text-gray-600">30 Days Support</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full py-3 px-6 border-2 border-primary-500 text-primary-500 font-semibold rounded-lg hover:bg-primary-500 hover:text-white transition-all">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="bg-gradient-to-br from-primary-500 to-primary-600 p-8 rounded-2xl text-white relative transform scale-105">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-accent-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
+                    </div>
+                    
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold mb-2">Professional</h3>
+                        <p class="text-primary-100 mb-4">Best for growing businesses</p>
+                        <div class="text-4xl font-bold">$2,499</div>
+                        <div class="text-primary-100">one-time</div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary-300 mr-3"></i>
+                            <span>Complete Website Redesign</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary-300 mr-3"></i>
+                            <span>Performance Optimization</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary-300 mr-3"></i>
+                            <span>Advanced SEO Package</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary-300 mr-3"></i>
+                            <span>Security Enhancements</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary-300 mr-3"></i>
+                            <span>90 Days Support</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full py-3 px-6 bg-white text-primary-600 font-semibold rounded-lg hover:bg-gray-100 transition-all">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-white p-8 rounded-2xl border-2 border-gray-200 hover:border-primary-500 transition-all">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
+                        <p class="text-gray-600 mb-4">For large organizations</p>
+                        <div class="text-4xl font-bold text-gray-900">$4,999</div>
+                        <div class="text-gray-600">one-time</div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary-500 mr-3"></i>
+                            <span class="text-gray-600">Complete Digital Transformation</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary-500 mr-3"></i>
+                            <span class="text-gray-600">Advanced Performance Optimization</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary-500 mr-3"></i>
+                            <span class="text-gray-600">Enterprise SEO Strategy</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary-500 mr-3"></i>
+                            <span class="text-gray-600">Advanced Security Suite</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-secondary-500 mr-3"></i>
+                            <span class="text-gray-600">1 Year Support & Maintenance</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full py-3 px-6 border-2 border-primary-500 text-primary-500 font-semibold rounded-lg hover:bg-primary-500 hover:text-white transition-all">
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-4">Need a custom solution? We're here to help.</p>
+                <button class="bg-gradient-to-r from-secondary-500 to-secondary-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-secondary-600 hover:to-secondary-700 transition-all">
+                    Request Custom Quote
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Pricing Section -->
+
+    <!-- @COMPONENT: Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Don't just take our word for it. Here's what business owners say about working with PixelBoost.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-accent-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        "PixelBoost transformed our outdated website into a modern, high-performing platform. Our conversion rate increased by 180% within the first month!"
+                    </p>
+                    <div class="flex items-center">
+                        <!-- Professional business client testimonial photo -->
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" alt="Client testimonial - business professional" class="w-12 h-12 rounded-full mr-4" />
+                        <div>
+                            <div class="font-semibold text-gray-900">Sarah Johnson</div>
+                            <div class="text-gray-600 text-sm">CEO, TechStart Inc.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-accent-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        "The team's attention to detail and expertise in performance optimization made our site lightning fast. Customer satisfaction has never been higher."
+                    </p>
+                    <div class="flex items-center">
+                        <!-- Professional business client testimonial photo -->
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" alt="Client testimonial - business executive" class="w-12 h-12 rounded-full mr-4" />
+                        <div>
+                            <div class="font-semibold text-gray-900">Michael Chen</div>
+                            <div class="text-gray-600 text-sm">Founder, EcoSolutions</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-accent-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        "Professional, reliable, and results-driven. PixelBoost didn't just redesign our website—they transformed our entire online presence."
+                    </p>
+                    <div class="flex items-center">
+                        <!-- Professional business client testimonial photo -->
+                        <img src="https://pixabay.com/get/gdf302d6d019087f7e981babceed729dfb2071f8550ba864993002aedc367a3336205c6873ddde4c64f867601c3d29c571dfcec15308b13676d5c16e3df9dff4a_1280.jpg" alt="Client testimonial - business owner" class="w-12 h-12 rounded-full mr-4" />
+                        <div>
+                            <div class="font-semibold text-gray-900">Emily Rodriguez</div>
+                            <div class="text-gray-600 text-sm">Owner, Creative Studio</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <div class="inline-flex items-center space-x-8 bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-gray-900">500+</div>
+                        <div class="text-gray-600">Happy Clients</div>
+                    </div>
+                    <div class="w-px h-12 bg-gray-300"></div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-gray-900">4.9/5</div>
+                        <div class="text-gray-600">Average Rating</div>
+                    </div>
+                    <div class="w-px h-12 bg-gray-300"></div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-gray-900">98%</div>
+                        <div class="text-gray-600">Client Retention</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Testimonials Section -->
+
+    <!-- @COMPONENT: Contact Section -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Ready to Boost Your Website?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Get in touch with our team today and let's discuss how we can transform your online presence.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Contact Form -->
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Send us a message</h3>
+                    
+                    <form class="space-y-6" data-event="submit:handleContactForm" data-implementation="Should validate fields and store in database">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2" for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all" data-bind="form.firstName" data-mock="true">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2" for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all" data-bind="form.lastName" data-mock="true">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2" for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all" data-bind="form.email" data-mock="true">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2" for="company">Company</label>
+                            <input type="text" id="company" name="company" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all" data-bind="form.company" data-mock="true">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2" for="service">Service Interest</label>
+                            <select id="service" name="service" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all" data-bind="form.service" data-mock="true">
+                                <option value="">Select a service</option>
+                                <option value="redesign">Website Redesign</option>
+                                <option value="performance">Performance Optimization</option>
+                                <option value="seo">SEO Enhancement</option>
+                                <option value="security">Security Improvements</option>
+                                <option value="mobile">Mobile Responsiveness</option>
+                                <option value="uiux">UI/UX Improvements</option>
+                                <option value="maintenance">Maintenance & Support</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2" for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all" placeholder="Tell us about your project..." data-bind="form.message" data-mock="true"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-gradient-to-r from-primary-500 to-primary-600 text-white py-4 rounded-lg font-semibold text-lg hover:from-primary-600 hover:to-primary-700 transition-all transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Get in touch</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            Ready to take your website to the next level? Our team of experts is here to help you achieve your digital goals.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Email Us</h4>
+                                <p class="text-gray-600">hello@pixelboost.com</p>
+                                <p class="text-gray-600">support@pixelboost.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-secondary-500 to-secondary-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Call Us</h4>
+                                <p class="text-gray-600">+1 (555) 123-4567</p>
+                                <p class="text-gray-600">Mon-Fri 9AM-6PM EST</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-accent-500 to-accent-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Visit Us</h4>
+                                <p class="text-gray-600">123 Business Ave</p>
+                                <p class="text-gray-600">New York, NY 10001</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-8">
+                        <h4 class="font-semibold text-gray-900 mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-primary-500 hover:text-white transition-all">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-primary-500 hover:text-white transition-all">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-primary-500 hover:text-white transition-all">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-primary-500 hover:text-white transition-all">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact Section -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <div class="text-2xl font-bold bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">
+                        PixelBoost
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Transforming websites into powerful business tools with professional enhancement services.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Website Redesign</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Performance Optimization</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">SEO Enhancement</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Security Improvements</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Mobile Responsiveness</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors">Testimonials</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Documentation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">© 2024 PixelBoost. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Terms</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <!-- @FUNCTIONALITY: Mobile menu toggle and smooth scrolling -->
+    <script>
+        (function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        // Close mobile menu if open
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            // TODO: Implement form validation and submission handling
+            // TODO: Add contact form backend integration
+            // TODO: Implement pricing plan selection functionality
+            // TODO: Add loading states for better UX
+        })();
+    </script>
+</body>
+</html>
